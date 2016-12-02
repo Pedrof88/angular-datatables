@@ -18,9 +18,7 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
 var core_1 = require('@angular/core');
-require('jquery');
-require('datatables.net');
-var angular_datatables_dtInstance_1 = require('./angular-datatables.dtInstance');
+var $ = require('jquery');
 var DataTableDirective = (function () {
     function DataTableDirective(el) {
         this.el = el;
@@ -30,10 +28,9 @@ var DataTableDirective = (function () {
         var _this = this;
         this.dtInstance = new Promise(function (resolve, reject) {
             Promise.resolve(_this.dtOptions).then(function (dtOptions) {
-                // See http://datatables.net/manual/api#Accessing-the-API to understand the difference between DataTable and dataTable
-                var DT = $(_this.el.nativeElement).DataTable(dtOptions);
-                var dt = $(_this.el.nativeElement).dataTable();
-                resolve(new angular_datatables_dtInstance_1.DTInstance($(_this.el.nativeElement).attr('id'), DT, dt));
+                var $elem = jQuery(_this.el.nativeElement);
+                var dt = $elem.DataTable(dtOptions);
+                resolve(dt);
             });
         });
     };
