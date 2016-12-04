@@ -8,7 +8,7 @@ import { HighlightJsService } from 'angular2-highlight-js';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app works!';
+  title = 'Angular DataTables examples';
   snippet = `
 <pre>
     <code class="typescript highlight">

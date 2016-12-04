@@ -6,8 +6,9 @@
  */
 
 import { Directive, ElementRef, Inject, OnInit, Input } from '@angular/core';
-import * as $ from 'jquery';
-import Datatable = DataTables.DataTable;
+import 'jquery';
+import 'datatables.net';
+declare var $: any;
 
 @Directive({
   selector: '[datatable]'
@@ -17,7 +18,7 @@ export class DataTableDirective implements OnInit {
    * The DataTable option you pass to configure your table.
    */
   @Input()
-  dtOptions: DataTables.Settings;
+  dtOptions: any;
 
   /**
    * The DataTable instance built by the jQuery library [DataTables](datatables.net).
@@ -25,17 +26,16 @@ export class DataTableDirective implements OnInit {
    * It's possible to execute the [DataTables APIs](https://datatables.net/reference/api/) with
    * this variable.
    */
-  dtInstance: Promise<DataTables.DataTable>;
+  dtInstance: Promise<any>;
 
   constructor(@Inject(ElementRef) private el: ElementRef) {
     this.dtOptions = $.extend(true, {}, $.fn.DataTable.defaults);
   }
 
-  ngOnInit(): any {
+  ngOnInit() {
     this.dtInstance = new Promise((resolve, reject) => {
       Promise.resolve(this.dtOptions).then(dtOptions => {
-        let $elem = jQuery(this.el.nativeElement);
-        let dt = $elem.DataTable(dtOptions);
+        let dt = $(this.el.nativeElement).DataTable(dtOptions);
         resolve(dt);
       });
     });

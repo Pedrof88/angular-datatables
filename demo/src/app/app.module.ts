@@ -7,18 +7,43 @@ import { HighlightJsModule, HighlightJsService } from 'angular2-highlight-js';
 
 import { DataTablesModule } from 'angular-datatables';
 
+import { AppRoutingModule } from './app.routing';
+
 import { AppComponent } from './app.component';
+import { WelcomeComponent } from './welcome.component';
+import { GettingStartedComponent } from './getting-started.component';
+
+// Basic examples
+import { ZeroConfigComponent }  from './basic/zero-config.component';
+import { WithOptionsComponent }  from './basic/with-options.component';
+import { WithAjaxComponent }  from './basic/with-ajax.component';
+
+// Advanced examples
+import { DtInstanceComponent } from './advanced/dt-instance.component';
+import { RowClickEventComponent } from './advanced/row-click-event.component';
+import { RowSelectComponent } from './advanced/row-select.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    WelcomeComponent,
+    GettingStartedComponent,
+
+    ZeroConfigComponent,
+    WithOptionsComponent,
+    WithAjaxComponent,
+
+    DtInstanceComponent,
+    RowClickEventComponent,
+    RowSelectComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HighlightJsModule,
     HttpModule,
-    DataTablesModule
+    DataTablesModule,
+    AppRoutingModule
   ],
   providers: [
     HighlightJsService

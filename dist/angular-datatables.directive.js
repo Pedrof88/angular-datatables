@@ -4,7 +4,6 @@
  * Use of this source code is governed by an MIT-style license that can be
  * found in the LICENSE file at https://raw.githubusercontent.com/l-lin/angular-datatables/master/LICENSE
  */
-"use strict";
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -17,9 +16,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
-var core_1 = require('@angular/core');
-var $ = require('jquery');
-var DataTableDirective = (function () {
+import { Directive, ElementRef, Inject, Input } from '@angular/core';
+import 'jquery';
+import 'datatables.net';
+export var DataTableDirective = (function () {
     function DataTableDirective(el) {
         this.el = el;
         this.dtOptions = $.extend(true, {}, $.fn.DataTable.defaults);
@@ -28,24 +28,22 @@ var DataTableDirective = (function () {
         var _this = this;
         this.dtInstance = new Promise(function (resolve, reject) {
             Promise.resolve(_this.dtOptions).then(function (dtOptions) {
-                var $elem = jQuery(_this.el.nativeElement);
-                var dt = $elem.DataTable(dtOptions);
+                var dt = $(_this.el.nativeElement).DataTable(dtOptions);
                 resolve(dt);
             });
         });
     };
     __decorate([
-        core_1.Input(), 
+        Input(), 
         __metadata('design:type', Object)
     ], DataTableDirective.prototype, "dtOptions", void 0);
     DataTableDirective = __decorate([
-        core_1.Directive({
+        Directive({
             selector: '[datatable]'
         }),
-        __param(0, core_1.Inject(core_1.ElementRef)), 
-        __metadata('design:paramtypes', [core_1.ElementRef])
+        __param(0, Inject(ElementRef)), 
+        __metadata('design:paramtypes', [ElementRef])
     ], DataTableDirective);
     return DataTableDirective;
 }());
-exports.DataTableDirective = DataTableDirective;
 //# sourceMappingURL=angular-datatables.directive.js.map

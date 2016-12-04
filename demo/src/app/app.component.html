@@ -1,39 +1,62 @@
-<!--<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" routerLink="/">{{ title }}</a>
-    </div>
-
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-            Basic<span class="caret"></span>
-          </a>
-          <ul class="dropdown-menu">
-            <li><a routerLink="basic/zero-config">Zero configuration</a></li>
-            <li><a routerLink="basic/with-options">With options</a></li>
-            <li><a routerLink="basic/with-ajax">With ajax</a></li>
-          </ul>
-        </li>
-      </ul>
-
-      <ul class="nav navbar-nav">
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-            Advanced<span class="caret"></span>
-          </a>
-          <ul class="dropdown-menu">
-            <li><a routerLink="advanced/dt-instance">DT Instance</a></li>
-            <li><a routerLink="advanced/row-click-event">Row click event</a></li>
-            <li><a routerLink="advanced/row-select">Row select</a></li>
-          </ul>
-        </li>
-      </ul>
-    </div>
+<header>
+  <div class="container">
+    <a href="#" (click)="$event.preventDefault()" data-activates="nav-mobile" class="button-collapse top-nav waves-effect waves-light circle hide-on-large-only"><i class="material-icons">menu</i></a>
   </div>
-</nav>-->
 
-<section [innerHTML]="snippet" highlight-js-content=".typescript"></section>
+  <ul id="nav-mobile" class="side-nav fixed">
+    <li class="logo">
+      <h3>
+        <a id="logo-container" routerLink="" class="brand-logo">
+          <div class="logo-img">
+            <img src="assets/angular.png" alt="Angular 2" />
+            <span class="plus">+</span>
+            <img src="assets/datatables.png" alt="DataTables" />
+          </div>
+          <div class="logo-title">
+            angular-datatables
+          </div>
+        </a>
+      </h3>
+    </li>
+    <li><hr /></li>
+    <li class="source">
+      <a href="https://www.npmjs.com/package/angular-datatables" title="Install with NPM">
+        <img src="assets/npm.png" alt="NPM" />
+      </a>
+      <a href="https://github.com/l-lin/angular-datatables" title="View Source on Github">
+        <img src="assets/github.png" alt="Github" />
+      </a>
+    </li>
+    <li><hr /></li>
+    <li class="bold"><a routerLink="/getting-started" class="waves-effect waves-teal">Getting started</a></li>
+    <li class="no-padding">
+      <ul class="collapsible collapsible-accordion">
+        <li class="bold"><a class="collapsible-header waves-effect waves-teal">Basic examples</a>
+          <div class="collapsible-body">
+            <ul>
+              <li><a routerLink="basic/zero-config">Zero configuration</a></li>
+              <li><a routerLink="basic/with-options">With options</a></li>
+              <li><a routerLink="basic/with-ajax">With ajax</a></li>
+            </ul>
+          </div>
+        </li>
+        <li class="bold"><a class="collapsible-header waves-effect waves-teal">Advanced examples</a>
+          <div class="collapsible-body">
+            <ul>
+              <li><a routerLink="advanced/dt-instance">Fetching DataTable instances</a></li>
+              <li><a routerLink="advanced/row-click-event">Row click event</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</header>
 
-<!--<router-outlet></router-outlet>-->
+<main>
+  <router-outlet></router-outlet>
+  <!--<section [innerHTML]="snippet" highlight-js-content=".typescript"></section>-->
+</main>
+
+
+

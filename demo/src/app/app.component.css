@@ -1,0 +1,41 @@
+.plus {
+  font-size: 70px;
+  text-shadow: 4px 4px #eee;
+}
+
+ul.side-nav.fixed ul.collapsible-accordion a.collapsible-header {
+  padding: 0 30px;
+}
+
+ul.side-nav.fixed ul.collapsible-accordion .collapsible-body li a {
+  font-weight: 400;
+  padding: 0 37.5px 0 45px;
+}
+
+.logo h3 {
+  font-size: 20px;
+  text-align: center;
+  margin: 0;
+}
+
+.side-nav .logo a {
+  height: 170px;
+}
+
+.logo-img {
+  padding-top: 20px;
+}
+
+.logo-title {
+  font-size: 20px;
+}
+
+.side-nav .source {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.side-nav .source a {
+  display: inline-block;
+  height: 33px;
+}
