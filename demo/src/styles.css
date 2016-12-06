@@ -34,6 +34,10 @@ header, main, footer {
   font-weight: 300;
 }
 
+.container {
+    width: 90%;
+}
+
 /* Tabs */
 .tabs .tab a {
   color: #66ceff;

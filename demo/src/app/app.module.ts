@@ -15,11 +15,15 @@ import { GettingStartedComponent } from './getting-started.component';
 
 // Basic examples
 import { ZeroConfigComponent }  from './basic/zero-config.component';
+import { ZeroConfigSnippetComponent }  from './basic/zero-config-snippet.component';
 import { WithOptionsComponent }  from './basic/with-options.component';
+import { WithOptionsSnippetComponent }  from './basic/with-options-snippet.component';
 import { WithAjaxComponent }  from './basic/with-ajax.component';
+import { WithAjaxSnippetComponent }  from './basic/with-ajax-snippet.component';
 
 // Advanced examples
 import { DtInstanceComponent } from './advanced/dt-instance.component';
+import { DtInstanceSnippetComponent } from './advanced/dt-instance-snippet.component';
 import { RowClickEventComponent } from './advanced/row-click-event.component';
 import { RowSelectComponent } from './advanced/row-select.component';
 
@@ -30,10 +34,14 @@ import { RowSelectComponent } from './advanced/row-select.component';
     GettingStartedComponent,
 
     ZeroConfigComponent,
+    ZeroConfigSnippetComponent,
     WithOptionsComponent,
+    WithOptionsSnippetComponent,
     WithAjaxComponent,
+    WithAjaxSnippetComponent,
 
     DtInstanceComponent,
+    DtInstanceSnippetComponent,
     RowClickEventComponent,
     RowSelectComponent
   ],

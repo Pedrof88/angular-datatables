@@ -7,19 +7,19 @@ import { DataTableDirective } from 'angular-datatables';
   templateUrl: 'dt-instance.component.html'
 })
 export class DtInstanceComponent implements OnInit {
-  @ViewChild(DataTableDirective)
-  private datatableEl: DataTableDirective;
+  // @ViewChild(DataTableDirective)
+  private datatableElement1: DataTableDirective;
+  private datatableElement2: DataTableDirective;
 
-  dtOptions: any = {};
+  dtOptions1: any = {};
+  dtOptions2: any = {};
 
-  displayToConsole(): void {
-    this.datatableEl.dtInstance.then(dtInstance => console.log(dtInstance));
+  displayToConsole(datatableElement: DataTableDirective): void {
+    datatableElement.dtInstance.then(dtInstance => console.log(dtInstance));
   }
 
   ngOnInit(): void {
-    this.dtOptions = {
-      ajax: 'data.json',
-      columns: [{
+    let columns = [{
         title: 'ID',
         data: 'id'
       }, {
@@ -28,7 +28,16 @@ export class DtInstanceComponent implements OnInit {
       }, {
         title: 'Last name',
         data: 'lastName'
-      }]
+      }];
+    this.dtOptions1 = {
+      ajax: 'data.json',
+      displayLength: 2,
+      paginationType: 'full_numbers',
+      columns: columns
+    };
+    this.dtOptions2 = {
+      ajax: 'data1.json',
+      columns: columns
     };
   }
 }

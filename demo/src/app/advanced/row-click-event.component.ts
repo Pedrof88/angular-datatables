@@ -16,7 +16,7 @@ export class RowClickEventComponent implements OnInit {
     this.message = info.id + ' - ' + info.firstName;
   }
 
-  ngOnInit(): any {
+  ngOnInit(): void {
     this.dtOptions = {
       ajax: 'data.json',
       columns: [{
