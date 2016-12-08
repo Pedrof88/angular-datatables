@@ -23,27 +23,14 @@
         </div>
         <div id="preview" class="col s12 m9 l12">
           <p>
-            <button type="button"
-                    class="btn waves-effect waves-light blue"
-                    (click)="displayToConsole(datatableElement1)">
-              Display the first DataTable instance in the console
+            <button type="button" class="btn waves-effect waves-light blue" (click)="displayToConsole(datatableElement)">
+              Display the DataTable instance in the console
             </button>
           </p>
           <blockquote>
-            The first DataTable instance ID is: {{ (datatableElement1.dtInstance | async)?.table().node().id }}
+            The DataTable instance ID is: {{ (datatableElement?.dtInstance | async)?.table().node().id }}
           </blockquote>
-          <table datatable [dtOptions]="dtOptions1" class="row-border hover"></table>
-          <p>
-            <button type="button"
-                    class="btn waves-effect waves-light blue"
-                    (click)="displayToConsole(datatableElement2)">
-              Display the second DataTable instance in the console
-            </button>
-          </p>
-          <blockquote>
-            The second DataTable instance ID is: {{ (datatableElement2.dtInstance | async)?.table().node().id }}
-          </blockquote>
-          <table datatable [dtOptions]="dtOptions2" class="row-border hover"></table>
+          <table datatable [dtOptions]="dtOptions" class="row-border hover"></table>
         </div>
         <dt-instance-snippet></dt-instance-snippet>
       </div>

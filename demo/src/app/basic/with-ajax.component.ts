@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+declare var $: any;
+
 @Component({
   selector: 'with-ajax',
   templateUrl: 'with-ajax.component.html'
@@ -21,5 +23,9 @@ export class WithAjaxComponent implements OnInit {
         data: 'lastName'
       }]
     };
+  }
+
+  ngAfterViewInit(): void {
+    $('ul.tabs').tabs();
   }
 }

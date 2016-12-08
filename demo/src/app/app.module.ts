@@ -25,7 +25,7 @@ import { WithAjaxSnippetComponent }  from './basic/with-ajax-snippet.component';
 import { DtInstanceComponent } from './advanced/dt-instance.component';
 import { DtInstanceSnippetComponent } from './advanced/dt-instance-snippet.component';
 import { RowClickEventComponent } from './advanced/row-click-event.component';
-import { RowSelectComponent } from './advanced/row-select.component';
+import { RowClickEventSnippetComponent } from './advanced/row-click-event-snippet.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +43,7 @@ import { RowSelectComponent } from './advanced/row-select.component';
     DtInstanceComponent,
     DtInstanceSnippetComponent,
     RowClickEventComponent,
-    RowSelectComponent
+    RowClickEventSnippetComponent
   ],
   imports: [
     BrowserModule,

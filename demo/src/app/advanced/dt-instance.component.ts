@@ -1,25 +1,29 @@
-import { Component, ViewChild, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 import { DataTableDirective } from 'angular-datatables';
+
+declare var $: any;
 
 @Component({
   selector: 'dt-instance',
   templateUrl: 'dt-instance.component.html'
 })
 export class DtInstanceComponent implements OnInit {
-  // @ViewChild(DataTableDirective)
-  private datatableElement1: DataTableDirective;
-  private datatableElement2: DataTableDirective;
+  @ViewChild(DataTableDirective)
+  private datatableElement: DataTableDirective;
 
-  dtOptions1: any = {};
-  dtOptions2: any = {};
+  dtOptions: any = {};
 
   displayToConsole(datatableElement: DataTableDirective): void {
     datatableElement.dtInstance.then(dtInstance => console.log(dtInstance));
   }
 
   ngOnInit(): void {
-    let columns = [{
+    this.dtOptions = {
+      dom: 'tfp',
+      ajax: 'data.json',
+      paginationType: 'full_numbers',
+      columns: [{
         title: 'ID',
         data: 'id'
       }, {
@@ -28,16 +32,11 @@ export class DtInstanceComponent implements OnInit {
       }, {
         title: 'Last name',
         data: 'lastName'
-      }];
-    this.dtOptions1 = {
-      ajax: 'data.json',
-      displayLength: 2,
-      paginationType: 'full_numbers',
-      columns: columns
+      }]
     };
-    this.dtOptions2 = {
-      ajax: 'data1.json',
-      columns: columns
-    };
+  }
+
+  ngAfterViewInit(): void {
+    $('ul.tabs').tabs();
   }
 }

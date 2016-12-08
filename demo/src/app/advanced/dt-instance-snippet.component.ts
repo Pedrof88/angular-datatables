@@ -17,12 +17,14 @@ export class DtInstanceSnippetComponent {
 <code class="xml highlight">&lt;p&gt;
   &lt;button type="button"
           class="btn waves-effect waves-light blue"
-          (click)="displayToConsole()"&gt;
+          (click)="displayToConsole(datatableElement)"&gt;
     Display the DataTable instance in the console
   &lt;/button&gt;
 &lt;/p&gt;
 &lt;p&gt;
-  {{ (datatableEl.dtInstance | async)?.table().node().id }}
+&lt;blockquote&gt;
+  The DataTable instance ID is: {{ (datatableEl.dtInstance | async)?.table().node().id }}
+&lt;/blockquote&gt;
 &lt;/p&gt;
 &lt;table datatable [dtOptions]="dtOptions" class="row-border hover"&gt;&lt;/table&gt;</code>
 </pre>

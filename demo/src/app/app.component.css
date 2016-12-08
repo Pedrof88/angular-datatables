@@ -32,10 +32,19 @@ ul.side-nav.fixed ul.collapsible-accordion .collapsible-body li a {
 
 .side-nav .source {
   text-align: center;
-  margin-top: 20px;
+  border-top: 1px solid #9e9e9e;
+  border-bottom: 1px solid #9e9e9e;
 }
 
 .side-nav .source a {
-  display: inline-block;
-  height: 33px;
+  width: 100%;
+  padding: 0;
+  height: 32px;
+}
+
+.side-nav .source td {
+  padding: 0;
+  text-align: center;
+  width: 50%;
+  line-height: 15px;
 }
