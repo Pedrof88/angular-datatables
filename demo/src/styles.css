@@ -6,19 +6,19 @@ html, body {
 }
 
 header, main, footer {
-    padding-left: 300px;
+  padding-left: 300px;
 }
 
 .banner {
-    background-color: #66ceff;
+  background-color: #66ceff;
 }
 
 .banner .header {
-    color: #FFF;
+  color: #FFF;
 }
 
 .banner h1 {
-    margin-top: 16px;
+  margin-top: 16px;
 }
 
 .banner .row {
@@ -35,7 +35,13 @@ header, main, footer {
 }
 
 .container {
-    width: 90%;
+  width: 90%;
+}
+
+/* Footer */
+footer.page-footer {
+  padding-top: 0;
+  background-color: #66ceff;
 }
 
 /* Tabs */

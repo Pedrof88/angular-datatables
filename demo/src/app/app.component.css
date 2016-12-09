@@ -32,8 +32,8 @@ ul.side-nav.fixed ul.collapsible-accordion .collapsible-body li a {
 
 .side-nav .source {
   text-align: center;
-  border-top: 1px solid #9e9e9e;
-  border-bottom: 1px solid #9e9e9e;
+  border-top: 1px solid #e9e9e9;
+  border-bottom: 1px solid #e9e9e9;
 }
 
 .side-nav .source a {
@@ -47,4 +47,8 @@ ul.side-nav.fixed ul.collapsible-accordion .collapsible-body li a {
   text-align: center;
   width: 50%;
   line-height: 15px;
+}
+
+.github-stars {
+  vertical-align: middle;
 }
