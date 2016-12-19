@@ -20,9 +20,7 @@ export class DtInstanceComponent implements OnInit {
 
   ngOnInit(): void {
     this.dtOptions = {
-      dom: 'tfp',
       ajax: 'data.json',
-      paginationType: 'full_numbers',
       columns: [{
         title: 'ID',
         data: 'id'

@@ -2,6 +2,7 @@ Before you write your question, please take some extra time to write a good titl
 
 ## What versions you are using?
 
+- angular version:
 - jquery version:
 - datatables version: 
 - angular-datatables version:
@@ -17,4 +18,3 @@ Write your example code using [Markdown](https://help.github.com/articles/github
 If you can, a [plnkr](http://plnkr.co/), [jsfiddle](https://jsfiddle.net/), [codepen](http://codepen.io/) or something alike is even better!
 
 Forgive me for being blunt, but if you can't follow this simple issue template (especially the code), don't expect me to help you efficiently!!! 
-

@@ -9,16 +9,4 @@ import { HighlightJsService } from 'angular2-highlight-js';
 })
 export class AppComponent {
   title = 'Angular DataTables examples';
-  snippet = `
-<pre>
-    <code class="typescript highlight">
-class Greeter {
-    constructor(public greeting: string) { }
-    greet() {
-        return "hello world";
-    }
-};
-    </code>
-</pre>
-  `;
 }
