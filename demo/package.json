@@ -1,6 +1,6 @@
 {
-  "name": "angular-angular-demo",
-  "version": "2.0.0-dev",
+  "name": "angular-datatables",
+  "version": "2.0.0-doc",
   "license": "MIT",
   "angular-cli": {},
   "scripts": {
